@@ -1,0 +1,47 @@
+# Pliki wygenerowane podczas budowania
+target/
+build/
+out/
+*.class
+.kotlin/
+
+# IntelliJ IDEA — cały folder, w tym lokalne konfiguracje
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Zmienne środowiskowe i lokalne sekrety
+.env
+.env.*
+!.env.example
+
+# Maven Wrapper — pozwól dołączyć plik wrappera
+!.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse
+.apt_generated/
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Visual Studio Code
+.vscode/
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logi
+*.log
