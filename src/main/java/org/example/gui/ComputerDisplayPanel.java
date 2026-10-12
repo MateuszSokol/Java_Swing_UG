@@ -126,7 +126,6 @@ public class ComputerDisplayPanel extends JPanel {
     }
 
     private void searchComputers() {
-        // Zapobiega jednoczesnemu uruchomieniu kolejnych wyszukiwań.
         if (!searchButton.isEnabled()) {
             return;
         }
@@ -164,7 +163,6 @@ public class ComputerDisplayPanel extends JPanel {
                 List<Computer> computers =
                         dao.findComputerByName(nameFragment);
 
-                // Przy obu kryteriach zawężamy wyniki również do daty.
                 if (bookingDate != null) {
                     return computers.stream()
                             .filter(computer -> bookingDate.equals(
@@ -191,7 +189,6 @@ public class ComputerDisplayPanel extends JPanel {
                     Thread.currentThread().interrupt();
                     statusLabel.setText("Przerwano odbieranie wyników.");
                 } catch (ExecutionException e) {
-                    // Usuń stare wyniki, aby nie wyglądały na nowe.
                     tableModel.setRowCount(0);
                     statusLabel.setText("Wyszukiwanie nie powiodło się.");
 

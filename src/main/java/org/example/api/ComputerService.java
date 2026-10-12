@@ -69,8 +69,6 @@ public class ComputerService {
                 name.trim(), bookingDate, usdPrice, plnPrice
         );
 
-        // Data faktycznie wykorzystanego notowania.
-        // Data księgowania pozostaje bez zmian.
         computer.setExchangeRateDate(
                 LocalDate.parse(rate.getEffectiveDate())
         );
@@ -107,7 +105,6 @@ public class ComputerService {
             }
         }
 
-        // Po 404 szukamy wcześniejszego notowania.
         LocalDate startDate = requestedDate.minusDays(LOOKBACK_DAYS);
         LocalDate endDate = requestedDate.minusDays(1);
 
